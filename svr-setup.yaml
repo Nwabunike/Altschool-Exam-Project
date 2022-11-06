@@ -1,0 +1,27 @@
+---
+- hosts: all
+  become: true
+  handlers:
+  - name: Reload Apache
+    service:
+      name: apache2
+      state: reloaded
+
+  - name: Restart Apache
+    service:
+      name: apache2
+      state: restarted
+  roles:
+    - { role: setup }
+
+    - { role: apache2 }
+
+    - { role: mysql }
+
+    - { role: php }
+
+    - { role: composer}
+
+  
+    
+

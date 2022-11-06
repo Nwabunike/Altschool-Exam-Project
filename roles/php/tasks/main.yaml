@@ -1,0 +1,16 @@
+---
+- name: Add the SURY PPA for PHP 8.1
+  apt: name={{ item }} update_cache=yes state=latest
+  loop: [ 'lsb-release' ,'apt-transport-https' ,'ca-certificates' ]
+
+
+- name: "Repo PHP"
+  apt_repository:
+    repo="ppa:ondrej/php"
+
+- name: "Updating the repo"
+  apt: update_cache=yes
+
+- name: Install PHP Modules / Extensions
+  apt: name={{ item }} update_cache=yes state=latest
+  loop: "{{ php_packages }}"
