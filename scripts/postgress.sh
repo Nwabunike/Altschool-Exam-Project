@@ -1,6 +1,4 @@
-#!/bin/bash -ex
-
-# This script is for use with the DevOps Challenge of installing PostgreSQL 9.6 on to a provisioned AWS EC2 instance running Ubuntu.
+!/bin/bash
 
 # This script will perform the following steps:
 # 1. Set variables such as $packages, $rfolder, $dfolder, $gitloc, $sysuser, $logfile, and $helloscript
@@ -27,7 +25,7 @@ gitloc='git://git.postgresql.org/git/postgresql.git'
 # $sysuser is the system user for running PostgreSQL
 sysuser='postgres'
 # $helloscript is the sql script for creating the PSQL user and creating a database.
-helloscript='/home/leewalker/scripts/hello.sql'
+helloscript='/home/scripts/hello.sql'
 # $logfile is the log file for this installation.
 logfile='psqlinstall-log'
 

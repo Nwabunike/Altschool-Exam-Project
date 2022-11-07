@@ -1,6 +1,5 @@
 ---
-# Initial Server Setup
-# remote_user: sammy
+
 
 # MySQL Setup
 mysql_root_password: pas$%EF23dsa23
